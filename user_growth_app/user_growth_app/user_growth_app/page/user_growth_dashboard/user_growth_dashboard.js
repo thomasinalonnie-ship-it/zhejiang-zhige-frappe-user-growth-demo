@@ -20,10 +20,10 @@ frappe.pages["user-growth-dashboard"].on_page_load = function (wrapper) {
 };
 
 function ensure_dashboard_styles() {
-	const href = "/assets/user_growth_app/css/user_growth_dashboard.css?v=20260518-zhige-layout";
+	const href = "/assets/user_growth_app/css/user_growth_dashboard.css?v=20260519-logo-alpha";
 	const existing = document.getElementById("ugd-dashboard-css");
 	if (existing) {
-		if (!existing.href.includes("20260518-zhige-layout")) existing.href = href;
+		if (!existing.href.includes("20260519-logo-alpha")) existing.href = href;
 		return;
 	}
 	const link = document.createElement("link");
