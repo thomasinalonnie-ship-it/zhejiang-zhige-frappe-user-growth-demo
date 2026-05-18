@@ -115,7 +115,7 @@ function dashboard_template(data, filters) {
 		<div class="ugd-shell">
 			<aside class="ugd-sidebar">
 				<div class="ugd-side-brand">
-					<img src="/assets/user_growth_app/img/zhejiang-zhige-logo.png" alt="浙江智格标志">
+					<img src="/assets/user_growth_app/img/zhige-logo-transparent.png" alt="浙江智格标志">
 					<div>
 						<div class="ugd-side-title">浙江智格</div>
 						<div class="ugd-side-meta">智能硬件 · 用户增长</div>
@@ -144,7 +144,7 @@ function dashboard_template(data, filters) {
 			<main class="ugd-main">
 				<header class="ugd-header">
 					<div class="ugd-brand-heading">
-						<img class="ugd-header-logo" src="/assets/user_growth_app/img/zhejiang-zhige-logo.png" alt="浙江智格标志">
+						<img class="ugd-header-logo" src="/assets/user_growth_app/img/zhige-logo-transparent.png" alt="浙江智格标志">
 						<div class="ugd-heading-copy">
 							<div class="ugd-kicker">浙江智格科技有限公司 · Frappe 笔试交付</div>
 							<h2 class="ugd-title">浙江智格用户增长数据驾驶舱</h2>
