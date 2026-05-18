@@ -1,0 +1,165 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:user_code",
+ "creation": "2026-05-18 18:40:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "identity_section",
+  "user_code",
+  "user_name",
+  "status",
+  "column_break_identity",
+  "region",
+  "industry",
+  "owner_sales",
+  "lifecycle_section",
+  "signup_date",
+  "churn_date",
+  "churn_reason",
+  "commercial_section",
+  "channel",
+  "plan",
+  "mrr"
+ ],
+ "fields": [
+  {
+   "fieldname": "identity_section",
+   "fieldtype": "Section Break",
+   "label": "用户信息"
+  },
+  {
+   "fieldname": "user_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "用户编号",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "user_name",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "label": "用户名称",
+   "reqd": 1
+  },
+  {
+   "default": "活跃",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "服务状态",
+   "options": "试用\n活跃\n流失",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_identity",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "region",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "地区"
+  },
+  {
+   "fieldname": "industry",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "行业"
+  },
+  {
+   "fieldname": "owner_sales",
+   "fieldtype": "Data",
+   "label": "负责人"
+  },
+  {
+   "fieldname": "lifecycle_section",
+   "fieldtype": "Section Break",
+   "label": "生命周期"
+  },
+  {
+   "fieldname": "signup_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "开通日期",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.status == '流失' || doc.status == 'Churned'",
+   "fieldname": "churn_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "流失日期"
+  },
+  {
+   "depends_on": "eval:doc.status == '流失' || doc.status == 'Churned'",
+   "fieldname": "churn_reason",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "流失原因",
+   "options": "\n价格因素\n产品匹配\n服务体验\n竞品替换\n预算缩减\n未知原因"
+  },
+  {
+   "fieldname": "commercial_section",
+   "fieldtype": "Section Break",
+   "label": "商业信息"
+  },
+  {
+   "fieldname": "channel",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "获客渠道",
+   "options": "自然增长\n广告投放\n转介绍\n渠道伙伴\n主动拓展",
+   "reqd": 1
+  },
+  {
+   "fieldname": "plan",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "套餐",
+   "options": "基础版\n专业版\n企业版",
+   "reqd": 1
+  },
+  {
+   "fieldname": "mrr",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "月经常收入"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-05-18 18:40:00.000000",
+ "modified_by": "Administrator",
+ "module": "User Growth App",
+ "name": "User Service Lifecycle",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "signup_date",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "user_name",
+ "track_changes": 1
+}
